@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Assignment</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet"  href="bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text" href="axios-master">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <div id="movieapp">
+    	
+	<div class="jumbotron">
+				<center><input type="text" v-model="searchKey" placeholder="Search Movies...">
+				<br><br>
+				<button class="btn btn-primary" v-on:click="searchMovies">Search</button></center>
+			<center><h2><strong>Results</strong></h2></center>
+			<ul>
+				<li v-for="item in moviesList.Search">
+					<movie-detail v-bind:movie="item"></movie-detail>
+					
+				</li>
+			</ul>
+	</div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/mainvue.js"></script>
+</body>
+</html>
